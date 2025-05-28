@@ -150,28 +150,7 @@ function getTimeMeaning() {
     }
     
     // Extract numbers from time (format: HH:MM)
-    const numbers = timeStr.replace(/:/g, '');
-    let angelNumber = numbers;
-    
-    // If the time is something like 11:11, 12:34, etc., use that directly
-    if (numbers in angelMeanings || numbers === '0000') {
-        angelNumber = numbers;
-    } else {
-        // Otherwise reduce to a single digit or master number
-        let sum = 0;
-        for (let i = 0; i < numbers.length; i++) {
-            sum += parseInt(numbers[i]);
-        }
-        
-        angelNumber = sum.toString();
-        while (angelNumber.length > 1 && !['11', '22', '33'].includes(angelNumber)) {
-            let newSum = 0;
-            for (let i = 0; i < angelNumber.length; i++) {
-                newSum += parseInt(angelNumber[i]);
-            }
-            angelNumber = newSum.toString();
-        }
-    }
+    const angelNumber = timeStr.replace(/:/g, '').padStart(4, '0');
     
     sendNumber(angelNumber);
 }
