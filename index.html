@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Number Meanings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 flex flex-col items-center justify-center p-4">
+    <div class="w-full max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-purple-800 mb-2">Angel Number Meanings</h1>
+            <p class="text-lg text-purple-600">Discover the divine messages hidden in numbers</p>
+        </div>
+        
+        <div class="blur-bg p-6 mb-8">
+            <div class="flex flex-wrap justify-center gap-4 mb-6">
+                <button id="numberTab" class="input-option active-tab px-4 py-2 rounded-full bg-purple-200 text-purple-800">
+                    <i class="fas fa-hashtag mr-2"></i>Enter Number
+                </button>
+                <button id="dateTab" class="input-option px-4 py-2 rounded-full bg-pink-200 text-pink-800">
+                    <i class="fas fa-calendar-day mr-2"></i>Pick a Date
+                </button>
+                <button id="timeTab" class="input-option px-4 py-2 rounded-full bg-blue-200 text-blue-800">
+                    <i class="fas fa-clock mr-2"></i>Enter Time
+                </button>
+            </div>
+            
+            <!-- Number Input -->
+            <div id="numberInput" class="input-section">
+                <div class="flex flex-col items-center">
+                    <input type="number" id="angelNumber" placeholder="Enter an angel number (e.g. 111, 222)" 
+                           class="w-full max-w-xs px-4 py-3 rounded-full border-2 border-purple-300 focus:border-purple-500 focus:outline-none text-center text-lg">
+                    <button onclick="getNumberMeaning()" class="mt-4 px-6 py-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white rounded-full font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 shadow-lg">
+                        Reveal Meaning
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Date Input -->
+            <div id="dateInput" class="input-section hidden">
+                <div class="flex flex-col items-center">
+                    <input type="date" id="angelDate" 
+                           class="w-full max-w-xs px-4 py-3 rounded-full border-2 border-pink-300 focus:border-pink-500 focus:outline-none text-center text-lg">
+                    <button onclick="getDateMeaning()" class="mt-4 px-6 py-2 bg-gradient-to-r from-pink-400 to-purple-500 text-white rounded-full font-semibold hover:from-pink-500 hover:to-purple-600 transition-all duration-300 shadow-lg">
+                        Reveal Meaning
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Time Input -->
+            <div id="timeInput" class="input-section hidden">
+                <div class="flex flex-col items-center">
+                    <input type="time" id="angelTime" 
+                           class="w-full max-w-xs px-4 py-3 rounded-full border-2 border-blue-300 focus:border-blue-500 focus:outline-none text-center text-lg">
+                    <button onclick="getTimeMeaning()" class="mt-4 px-6 py-2 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-full font-semibold hover:from-blue-500 hover:to-purple-600 transition-all duration-300 shadow-lg">
+                        Reveal Meaning
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="mt-12 text-center text-purple-600 text-sm">
+        <p>Angel numbers carry divine guidance by referring to specific numerological meanings</p>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+</html>

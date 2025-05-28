@@ -1,0 +1,50 @@
+body {
+    font-family: 'Comfortaa', cursive;
+    transition: background-image 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.blur-bg {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.input-option {
+    transition: all 0.3s ease;
+}
+
+.input-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.active-tab {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+}
+
+#resultContainer {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade-in {
+    opacity: 1 !important;
+}
+
+.number-display {
+    font-size: 5rem;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+    .number-display {
+        font-size: 3rem;
+    }
+}
